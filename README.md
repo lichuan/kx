@@ -1,5 +1,6 @@
 # The Kx Programming Language
 Kx is a statically typed programming language for concurrency, focusing on **simplicity**, **orthogonality**, **clarity** and **consistency**. It borrows many features and advantages from Erlang and can be considered a statically typed version of Erlang.
+
 Kx是一门面向并发的静态类型的编程语言，注重简洁性，正交性，明确清晰和一致性。它借鉴了很多来自erlang语言的一些特性和优点，可以说kx语言是静态类型版本的erlang语言。
 
 ## Features (特性)
