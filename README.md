@@ -1,11 +1,8 @@
 # The Kx Programming Language
-
 Kx is a statically typed programming language for concurrency, focusing on **simplicity**, **orthogonality**, **clarity** and **consistency**. It borrows many features and advantages from Erlang and can be considered a statically typed version of Erlang.
-
 Kx是一门面向并发的静态类型的编程语言，注重简洁性，正交性，明确清晰和一致性。它借鉴了很多来自erlang语言的一些特性和优点，可以说kx语言是静态类型版本的erlang语言。
 
 ## Features (特性)
-
 - **Static typing** - Strong type checking during compile time makes the Kx language safer and more robust.
 - **Concurrency model** - Lightweight processes, similar to the Erlang process model, make concurrency easier.
 - **Immutability** - Variables are assigned once and cannot be changed, eliminating the need for complex locking mechanisms.
@@ -14,6 +11,8 @@ Kx是一门面向并发的静态类型的编程语言，注重简洁性，正交
 - **Binary processing** - Powerful binary processing, combined with pattern matching, makes parsing binary data very easy.
 - **Fault tolerance** - Allows monitoring and restarting of lightweight processes, eliminating the tedious defensive programming required in languages ​​like Go.
 - **Package manager** - A simple and clear package management mechanism allows Kx packages with duplicate names from multiple repositories to be used simultaneously in your codebase.
+
+##
 - **静态类型** - 编译时的强类型检查，让kx语言更安全和健壮
 - **并发模型** - 轻量级进程，类似于erlang中的process模型，让并发更容易
 - **不可变性** - 变量一次性赋值，不可更改，免去复杂的加锁机制
