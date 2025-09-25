@@ -58,7 +58,7 @@ Because in this code, error is not combined with Data, but instead with Reason, 
 - **包管理器** - 简洁明晰的包管理机制，让多个仓库中的重复名的不同的kx包也能同时在你的代码库中为你所用
 
 ## Kx Language Specification (Kx语言规范)
-### Package Manager
+### Package Manager (包管理器)
 The Kx language is capable of supporting very large projects. To manage different third-party packages, a package management mechanism is introduced, with a syntax that emphasizes consistency. It looks roughly like this:
 
 kx语言能够支持超大型的项目，为了管理不同的第三方包，引入包管理机制，语法上注重一致性，大致如下：
@@ -70,7 +70,7 @@ import {name.kx@2}/util/list as list
 ```
 Why are there several different forms of imports? The main reason is to meet the needs of large projects. The name inside the curly braces after `import` represents a package name, which must be unique within the same repository. For example, all package names must be unique on **a.com**. However, since package repositories may be maintained by different companies or organizations, it is impractical to ensure global uniqueness of package names across all repositories. There may be multiple packages with the same name in different repositories. for instance, there might also be a `name.kx` on **b.com**. In such cases, the `@id` method is used to import packages with the same name from different repositories, thereby resolving naming conflicts!
 
-为什么有这么几种不同的导入形式呢？主要的原因是基于考虑到要支持大项目的需要，`import`后的大括号里的名称表示一个包名，这个包名在同一个仓库下，必须唯一，比如在**a.com**中所有的包名唯一。但是包的仓库可能由不同的公司和组织来维护，要做到所有包名实现跨仓库的唯一是不切实际的，当在不同的仓库中存在多个名字一样的包，比如在**b.com**中也有一个`name.kx`，因为。这时候，需要用到`@id`的方式，来导入不同仓库的相同的包名，这就解决了命名冲突！
+为什么有这么几种不同的导入形式呢？主要的原因是基于考虑到要支持大项目的需要，`import`后的大括号里的名称表示一个包名，这个包名在同一个仓库下，必须唯一，比如在**a.com**中所有的包名唯一。但是包的仓库可能由不同的公司和组织来维护，要做到所有包名实现跨仓库的唯一是不切实际的，当在不同的仓库中存在多个名字一样的包，比如在**b.com**中也有一个`name.kx` 这时候，需要用到`@id`的方式，来导入不同仓库的相同的包名，这就解决了命名冲突！
 
 In addition to package name conflicts, module names within different packages under the same repository may also be duplicated. This is illustrated in the first two lines of the import statements above: both the kx packages from Google and Twitter contain a module named `tcp`. The solution is simple—just rename it after `as`, which resolves the naming conflict for module names!
 
