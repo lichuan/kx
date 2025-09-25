@@ -29,7 +29,7 @@ This syntax is also ambiguous because data and err can have multiple combination
 这种形式的语法，也是不明确的，因为data和err可以有多种组合，当err为nil时，data是否一定有效是不明确的，同时当err不为nil时，data又是否一定有效也是不明确的，从语言设计上看，这样的组合都是不明确的。相反在erlang语言中的返回值的设计就清晰了很多：
 ```erlang
 case funcFoo(arg) of
-  {ok, Data} -> // todo;
+  {ok, Data} -> // todo
   {error, Reason} -> // todo
 end
 ```
